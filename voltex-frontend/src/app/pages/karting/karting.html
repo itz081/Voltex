@@ -1,0 +1,52 @@
+<div class="category-container">
+
+  <!-- BOTÓN DE VOLVER INTELIGENTE -->
+  <button class="btn-back" (click)="volverSegunSesion()">
+    <i class="pi pi-arrow-left"></i> Volver
+  </button>
+
+  <!-- Banner principal de la categoría -->
+  <section class="category-header">
+    <span class="badge">SISTEMAS ESPECÍFICOS</span>
+    <h1>SUPERCARGADORES PARA KARTING</h1>
+    <p>Kits de inducción forzada de alta respuesta y peso ultraligero diseñados para motores de competición.</p>
+  </section>
+
+  <!-- ESTADOS DE CARGA / VACÍO -->
+  @if (cargando) {
+    <div class="loading-state">
+      <p>Sincronizando telemetría de karting...</p>
+    </div>
+  } @else if (productosKarting.length === 0) {
+    <div class="empty-state">
+      <i class="pi pi-info-circle"></i>
+      <h3>No hay módulos de Karting en la Base de Datos</h3>
+      <p>Aún no se han dado de alta componentes específicos para esta categoría desde el panel de administración.</p>
+    </div>
+  } @else {
+    <!-- GRID DE PRODUCTOS DINÁMICOS -->
+    <section class="products-grid">
+      <div class="product-card" *ngFor="let product of productosKarting">
+        <div class="card-badge">{{ product.category || product.categoria || 'RACE' }}</div>
+        
+        <div class="card-image" [routerLink]="['/producto', product.id]" style="cursor: pointer;">
+          <img [src]="product.image || product.imageUrl || product.imagen" [alt]="product.name || product.nombre" />
+        </div>
+
+        <div class="card-content">
+          <span class="category-tag">{{ product.marca || 'KARTING PRO' }}</span>
+          <h3>{{ product.name || product.nombre }}</h3>
+          <p>{{ product.description || product.descripcion }}</p>
+          
+          <div class="card-footer">
+            <span class="price">{{ (product.price || product.precio) | currency:'MXN' }}</span>
+            <button class="cart-btn-card" (click)="agregarAlCarrito(product)">
+              <i class="pi pi-shopping-cart"></i> Agregar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  }
+
+</div>

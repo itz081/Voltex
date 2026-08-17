@@ -1,0 +1,124 @@
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.auth-card {
+  background-color: #0D1525;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 30px rgba(8, 14, 26, 0.5);
+}
+
+.auth-header h2 {
+  color: #EDF2FF;
+  font-size: 24px;
+  font-weight: 900;
+  margin: 0 0 6px 0;
+  letter-spacing: 1px;
+}
+
+.auth-header p {
+  color: #5A7898;
+  font-size: 13px;
+  margin: 0 0 25px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: #EDF2FF;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  background-color: #080E1A;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  padding: 12px 14px;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #00D4FF;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.2);
+}
+
+/* MEDIDOR DE CONTRASEÑA */
+.strength-meter-container {
+  margin-top: 8px;
+}
+
+.strength-bar-background {
+  background-color: #1a263b;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.strength-bar-fill {
+  height: 100%;
+  width: 0%;
+  transition: all 0.3s ease-in-out;
+}
+
+.strength-text {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* BOTÓN SUBMIT */
+.auth-submit-btn {
+  width: 100%;
+  background-color: #00D4FF;
+  color: #080E1A;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+  letter-spacing: 1px;
+  margin-top: 10px;
+  transition: background-color 0.2s ease;
+}
+
+.auth-submit-btn:hover {
+  background-color: #00FFCC;
+}
+
+.auth-toggle {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  color: #5A7898;
+}
+
+.toggle-link {
+  color: #00D4FF;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+.toggle-link:hover {
+  color: #00FFCC;
+}

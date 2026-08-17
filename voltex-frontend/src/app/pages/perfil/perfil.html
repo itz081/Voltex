@@ -1,0 +1,65 @@
+<div class="perfil-container">
+  
+  <header class="perfil-header">
+    <button class="btn-back" routerLink="/usuario">
+      <i class="pi pi-arrow-left"></i> Volver al Panel
+    </button>
+    <h1>CONFIGURACIÓN DEL PILOTO</h1>
+  </header>
+
+  <div class="perfil-layout">
+    
+    <aside class="perfil-card">
+      <div class="avatar-container">
+        <i class="pi pi-user user-avatar-icon"></i>
+      </div>
+      <div class="profile-info-group">
+        <label>ESTADO DEL SENSOR</label>
+        <span class="badge-online">● SISTEMA ACTIVO</span>
+      </div>
+      <div class="profile-info-group">
+        <label>CORREO ELECTRÓNICO</label>
+        <p class="profile-value">{{ usuarioEmail || 'invitado@voltex.com' }}</p>
+      </div>
+      <div class="profile-info-group">
+        <label>ESCUDERÍA REGISTRADA</label>
+        <p class="profile-value">{{ nombreEscuderia }}</p>
+      </div>
+    </aside>
+
+    <main class="historial-panel">
+      <h2><i class="pi pi-history"></i> Historial de Adquisiciones Técnicas</h2>
+      <p class="subtitle">Bitácora de telemetría de órdenes y hardware de escudería.</p>
+
+      <div class="table-responsive">
+        <table class="historial-table">
+          <thead>
+            <tr>
+              <th>ID ÓRDEN</th>
+              <th>FECHA</th>
+              <th>COMPONENTES</th>
+              <th>TOTAL</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let compra of historialCompras">
+              <td class="order-id">{{ compra.idOrden }}</td>
+              <td>{{ compra.fecha }}</td>
+              <td class="items-desc">{{ compra.items }}</td>
+              <td class="price-value">{{ compra.total | currency:'MXN' }}</td>
+              <td>
+                <span class="status-badge" [ngClass]="getStatusClass(compra.status)">
+                  {{ compra.status }}
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<app-footer-usuario></app-footer-usuario>

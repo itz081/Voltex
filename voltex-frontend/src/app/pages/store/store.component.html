@@ -1,0 +1,50 @@
+<div class="store-layout">
+  <!-- Filtros laterales -->
+  <aside class="sidebar-section">
+    <app-sidebar-filters></app-sidebar-filters>
+  </aside>
+
+  <!-- Catálogo de Productos Dinámico -->
+  <main class="catalog-section">
+    <div class="catalog-header">
+      <h2>Kits de Supercargadores y Componentes</h2>
+      <p>Optimiza el rendimiento de tu motor con tecnología de alto flujo.</p>
+    </div>
+
+    <!-- Mensaje si la señal de productos está vacía -->
+    <div *ngIf="state.productos().length === 0" class="no-products-msg">
+      <p>Sincronizando inventario con la base de datos...</p>
+    </div>
+
+    <!-- Grid de productos usando datos reales con casteo seguro -->
+    <div class="products-grid">
+      <div class="product-card" *ngFor="let producto of state.productos()">
+        
+        <div class="product-image-container">
+          <img [src]="$any(producto).imagen || $any(producto).image || $any(producto).imageUrl" 
+               [alt]="$any(producto).nombre || $any(producto).name" 
+               class="product-img">
+        </div>
+        
+        <div class="product-details">
+          <span class="product-category">{{ $any(producto).categoria || $any(producto).category }}</span>
+          <h3 class="product-title">{{ $any(producto).nombre || $any(producto).name }}</h3>
+          
+          <p class="product-description">
+            {{ $any(producto).descripcion || $any(producto).description || 'Componente de alto rendimiento para escudería.' }}
+          </p>
+          
+          <div class="product-footer">
+            <span class="product-price">
+              {{ ($any(producto).precio || $any(producto).price) | currency:'MXN':'symbol':'1.2-2' }}
+            </span>
+            <button class="btn-add-pit" (click)="agregarAlCarrito(producto)">
+              <i class="pi pi-shopping-cart"></i> Añadir a Pits
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main> 
+</div>

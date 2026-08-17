@@ -1,0 +1,185 @@
+.product-detail-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  color: #EDF2FF;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: #00D4FF;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 30px;
+  transition: all 0.2s ease;
+}
+
+.btn-back:hover {
+  background-color: rgba(0, 212, 255, 0.1);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background-color: #0D1525;
+  border: 1px solid rgba(0, 212, 255, 0.15);
+  border-radius: 16px;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+.detail-image-box {
+  position: relative;
+  height: 380px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #080E1A;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.detail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #080E1A;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 6px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.card-brand {
+  font-size: 12px;
+  color: #00D4FF;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.detail-title {
+  font-size: 28px;
+  color: #EDF2FF;
+  margin: 8px 0;
+  font-weight: 900;
+}
+
+.detail-subtitle {
+  font-size: 14px;
+  color: #5A7898;
+  margin: 0 0 20px 0;
+}
+
+.price-box-large {
+  margin-bottom: 25px;
+}
+
+.price-currency {
+  font-size: 11px;
+  color: #5A7898;
+  display: block;
+}
+
+.price-amount {
+  font-size: 32px;
+  color: #EDF2FF;
+  font-weight: 900;
+}
+
+.specs-box {
+  background-color: rgba(8, 14, 26, 0.8);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 1px solid rgba(0, 212, 255, 0.1);
+}
+
+.specs-box h3 {
+  font-size: 12px;
+  color: #00D4FF;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.spec-row:last-child {
+  margin-bottom: 0;
+}
+
+.spec-label {
+  color: #5A7898;
+}
+
+.spec-value {
+  color: #EDF2FF;
+  font-weight: 600;
+  text-align: right;
+}
+
+.highlight-cyan {
+  color: #00FFCC;
+  font-weight: 800;
+}
+
+.buy-btn-large {
+  width: 100%;
+  background-color: #00D4FF;
+  border: none;
+  color: #080E1A;
+  font-weight: 900;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+}
+
+.buy-btn-large:hover {
+  background-color: #00FFCC;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+.loading-state {
+  text-align: center;
+  padding: 60px;
+  color: #5A7898;
+  font-size: 16px;
+}

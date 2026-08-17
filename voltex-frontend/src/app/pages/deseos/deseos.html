@@ -1,0 +1,47 @@
+<div class="wishlist-container">
+  
+  <header class="wishlist-header">
+    <button class="btn-back" routerLink="/usuario">
+      <i class="pi pi-arrow-left"></i> Volver al Panel
+    </button>
+    <h1>LISTA DE DESEOS TÉCNICOS</h1>
+  </header>
+
+  @if (wishlist.length === 0) {
+    <div class="empty-wishlist">
+      <i class="pi pi-heart-slash empty-icon"></i>
+      <h3>No hay módulos en espera</h3>
+      <p>Tu banco de pruebas está vacío. Explora el catálogo para agregar componentes.</p>
+      <button class="btn-explore" routerLink="/usuario">Explorar Componentes</button>
+    </div>
+  } @else {
+    <div class="wishlist-grid">
+      <div class="wishlist-card" *ngFor="let item of wishlist" [routerLink]="['/producto', item.id]">
+        
+        <div class="card-image-wrapper">
+          <span class="badge-category">{{ item.category }}</span>
+          <img [src]="item.image" [alt]="item.name" class="item-image">
+          <button class="btn-remove" (click)="eliminarDeLista(item.id, $event)" title="Remover">
+            <i class="pi pi-trash"></i>
+          </button>
+        </div>
+
+        <div class="card-info">
+          <h3>{{ item.name }}</h3>
+          <span class="stock-tag" [ngClass]="item.inStock ? 'in-stock' : 'out-of-stock'">
+            {{ item.inStock ? '● DISPONIBLE PARA ADQUISICIÓN' : '○ EN PRODUCCIÓN' }}
+          </span>
+          
+          <div class="card-footer">
+            <span class="price">{{ item.price | currency:'MXN' }}</span>
+            <button class="btn-action-add" (click)="agregarAlCarrito(item, $event)">
+              <i class="pi pi-shopping-cart"></i> Desplegar
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  }
+
+</div>

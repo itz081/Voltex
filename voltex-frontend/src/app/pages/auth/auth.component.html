@@ -1,0 +1,46 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+    
+    <div class="auth-header">
+      <h2>INGRESO A PITS</h2>
+      <p>Introduce tus credenciales de piloto</p>
+    </div>
+
+    <form class="auth-form-container" (ngSubmit)="encenderMotor()">
+      
+      <div class="form-group">
+        <label>Correo Electrónico</label>
+        <input 
+          type="email" 
+          [(ngModel)]="email" 
+          name="email" 
+          placeholder="piloto@voltex.com" 
+          required 
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Contraseña de Telemetría</label>
+        <input 
+          type="password" 
+          [(ngModel)]="password" 
+          name="password" 
+          placeholder="••••••••" 
+        />
+      </div>
+
+      <button type="submit" class="auth-submit-btn">
+        ENCENDER MOTOR
+      </button>
+
+    </form>
+
+    <div class="auth-toggle">
+      <p>
+        ¿No tienes cuenta de escudería? 
+        <span class="toggle-link" routerLink="/registro">Regístrate aquí</span>
+      </p>
+    </div>
+
+  </div>
+</div>

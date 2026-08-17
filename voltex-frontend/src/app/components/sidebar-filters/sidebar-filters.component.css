@@ -1,0 +1,66 @@
+:host {
+  display: block;
+  width: 280px;
+  min-width: 280px;
+  flex-shrink: 0;
+}
+.sidebar-container {
+    display: block; /* <-- ESTA ES LA LÍNEA MÁGICA #1 */
+    min-width: 280px;
+    width: 280px;
+    margin-right: 30px; /* Un poco de espacio separador */
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.filter-section {
+  background-color: #0D1525; /* Azul marino oscuro de paneles */
+  border: 1px solid rgba(0, 212, 255, 0.15); /* Hairline cian */
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.filter-section h3 {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: #00D4FF; /* Títulos en cian eléctrico */
+  margin-top: 0;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+  padding-bottom: 6px;
+  font-weight: 800;
+}
+
+.filter-option {
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #EDF2FF;
+  display: flex;
+  align-items: center;
+}
+
+.filter-option:last-child {
+  margin-bottom: 0;
+}
+
+.filter-option input {
+  margin-right: 12px;
+  accent-color: #00D4FF; /* Pone el checkbox azul cian automáticamente */
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+}
+
+.filter-option label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.filter-option label:hover {
+  color: #00FFCC; /* Torna a turquesa el texto al pasar el cursor */
+}

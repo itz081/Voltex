@@ -1,0 +1,52 @@
+@import "primeicons/primeicons.css";
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #080E1A; /* Azul noche profundo */
+  color: #EDF2FF;           /* Blanco azulado */
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   DISEÑO RESPONSIVO GLOBAL (Mobile First)
+   ========================================================================== */
+
+/* 1. Base para Celulares (Pantalla pequeña) */
+.main-layout {
+  display: flex;
+  flex-direction: column; /* Apilamos los filtros arriba de los productos */
+  padding: 15px;
+  gap: 20px;
+}
+
+.sidebar-filters {
+  width: 100%;
+  max-height: none;
+  overflow-y: visible;
+}
+
+.products-grid {
+  grid-template-columns: 1fr; /* Una sola tarjeta por fila en celular */
+}
+
+/* 2. Para Tablets y Laptops (Pantalla mediana/grande) */
+@media (min-width: 992px) {
+  .main-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Volvemos a las dos columnas originales */
+    padding: 30px 40px;
+  }
+  
+  .products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  }
+}
+
+/* 3. Ajuste de imágenes para que no se deformen en ninguna pantalla */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

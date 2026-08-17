@@ -1,0 +1,228 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.category-container {
+  padding: 30px 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+/* --- BOTÓN DE VOLVER (ESTILO NEÓN) --- */
+.btn-back {
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #00D4FF;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
+}
+
+.btn-back:hover {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: #00D4FF;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  transform: translateX(-3px);
+}
+
+/* --- HEADER DE CATEGORÍA --- */
+.category-header {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.9) 100%);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 14px;
+  padding: 35px 40px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.category-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #00D4FF;
+  box-shadow: 0 0 15px #00D4FF;
+}
+
+.category-header .badge {
+  background: rgba(0, 212, 255, 0.15);
+  color: #00D4FF;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.category-header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 10px 0 15px 0;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.category-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+  margin: 0;
+  max-width: 750px;
+  line-height: 1.5;
+}
+
+/* --- GRID DE PRODUCTOS --- */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #00D4FF;
+  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.25);
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 212, 255, 0.85);
+  color: #000;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  background: #090e17;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .card-image img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.category-tag {
+  color: #00D4FF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.card-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.card-content p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 15px;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #00D4FF;
+}
+
+.cart-btn-card {
+  background: #00D4FF;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cart-btn-card:hover {
+  background: #38bdf8;
+  transform: scale(1.03);
+}
+
+/* --- ESTADOS DE CARGA Y VACÍO --- */
+.empty-state, .loading-state {
+  text-align: center;
+  padding: 70px 20px;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px dashed rgba(0, 212, 255, 0.3);
+  border-radius: 12px;
+  color: #94a3b8;
+}
+
+.empty-state i, .loading-state i {
+  font-size: 2.5rem;
+  color: #00D4FF;
+  margin-bottom: 15px;
+  display: block;
+}

@@ -1,0 +1,39 @@
+@if (isVisible) {
+  <div class="watch-overlay">
+    <div class="apple-watch-frame">
+      <div class="watch-screen">
+        
+        <div class="watch-header">
+          <span class="app-icon"><span class="v-small">7</span></span>
+          <span class="app-name">VOLTEX PITS</span>
+          <span class="watch-time">ahora</span>
+        </div>
+
+        <div class="watch-content">
+          <p class="notif-title">¡NUEVO KIT DISPONIBLE!</p>
+          <div class="product-mini-box">
+            <img [src]="productoReciente.imagen" alt="Supercargador" class="mini-img">
+            <div class="mini-info">
+              <span class="mini-brand">{{ productoReciente.marca }}</span>
+              <!-- Nota: Asegúrate de que el nombre tenga al menos dos palabras para evitar errores en el split -->
+              <p class="mini-model">{{ productoReciente.nombre }}</p>
+            </div>
+          </div>
+          <p class="notif-desc">Unidad de alta presión optimizada para alto rendimiento.</p>
+        </div>
+
+       <div class="watch-actions">
+  <!-- Botón primario para ver el producto (redirige al detalle o tienda) -->
+  <button class="watch-btn-primary" type="button" (click)="verProducto()">
+    Ver en Móvil
+  </button>
+  <!-- Botón secundario para descartar la notificación del reloj -->
+  <button class="watch-btn-secondary" type="button" (click)="descartar()">
+    Descartar
+  </button>
+</div>
+
+      </div>
+    </div>
+  </div>
+}

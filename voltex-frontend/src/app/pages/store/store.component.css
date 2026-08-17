@@ -1,0 +1,101 @@
+/* Aseguramos que el layout sea una cuadrícula de dos columnas */
+.store-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr; /* Columna fija de 260px para filtros + resto para catálogo */
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Forzamos al sidebar a no expandirse más de lo necesario */
+.sidebar-section {
+  width: 100%;
+}
+
+/* El catálogo debe ocupar el espacio restante */
+.catalog-section {
+  width: 100%;
+}
+
+/* Grid de productos responsivo */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* Tarjeta de producto estilizada */
+.product-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  border-color: #00D4FF;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.15);
+}
+
+.product-image-container {
+  height: 200px;
+  background: #000;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-details {
+  padding: 20px;
+}
+
+.product-category {
+  color: #00D4FF;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.product-title {
+  color: #fff;
+  margin: 8px 0;
+}
+
+.product-description {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  height: 3em; /* Limita la descripción a 3 líneas para que las tarjetas no se deformen */
+  overflow: hidden;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #00D4FF;
+}
+
+.btn-add-pit {
+  background: #00D4FF;
+  color: #000;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}

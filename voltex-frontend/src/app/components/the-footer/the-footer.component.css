@@ -1,0 +1,145 @@
+.main-footer {
+  background-color: #0D1525; /* Cards / panels */
+  border-top: 1px solid rgba(0, 212, 255, 0.15); /* Bordes cian */
+  padding: 40px 40px 20px 40px;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  gap: 40px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #EDF2FF; /* Texto principal */
+  margin-bottom: 15px;
+}
+
+.brand-v {
+  color: #00D4FF; /* Acento principal cian */
+}
+
+.footer-brand p {
+  color: #5A7898; /* Texto muted */
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.phone-footer {
+  color: #00D4FF;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.footer-links h3, .footer-newsletter h3 {
+  font-size: 12px;
+  color: #5A7898;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #EDF2FF;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #00FFCC; /* Acento secundario turquesa */
+}
+
+.social-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #EDF2FF;
+  font-size: 12px;
+}
+
+.social-tags span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.social-tags span:hover {
+  color: #00D4FF;
+}
+
+.newsletter-box {
+  display: flex;
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.newsletter-box input {
+  background: #080E1A; /* Fondo global */
+  border: none;
+  padding: 10px;
+  color: white;
+  flex-grow: 1;
+  font-size: 13px;
+  outline: none;
+}
+
+.newsletter-box button {
+  background-color: #00D4FF;
+  border: none;
+  color: #080E1A;
+  font-weight: 900;
+  padding: 0 15px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.newsletter-box button:hover {
+  background-color: #00FFCC;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(237, 242, 255, 0.05);
+  padding-top: 20px;
+  font-size: 11px;
+  color: #5A7898;
+}
+
+/* Responsivo básico por si se encoge la pantalla */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+.social-tags a {
+  color: #EDF2FF;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.social-tags a:hover {
+  color: #00D4FF;
+}

@@ -1,0 +1,257 @@
+/* Contenedor Principal del Checkout */
+.checkout-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  color: #fff;
+}
+
+.checkout-container h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Layout de dos columnas: Formulario a la izquierda, Resumen a la derecha */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Botón Volver */
+.btn-back {
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #00D4FF;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.1);
+}
+
+.btn-back:hover {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: #00D4FF;
+  box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+  transform: translateX(-3px);
+}
+
+/* Tarjetas contenedoras (Formulario y Resumen) */
+.checkout-form, .order-summary {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.checkout-form h3, .order-summary h3 {
+  font-size: 1.25rem;
+  color: #00D4FF;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  letter-spacing: 0.5px;
+}
+
+/* Estilos de los Campos del Formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  width: 100%;
+  background: #090e17;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 12px 15px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #00D4FF;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.3);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.error-msg {
+  color: #ef4444;
+  font-size: 0.75rem;
+  margin-top: 6px;
+}
+
+/* Botón de Confirmar y Pagar */
+.btn-submit {
+  width: 100%;
+  background: linear-gradient(135deg, #00D4FF 0%, #0284c7 100%);
+  color: #000;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1rem;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(135deg, #38bdf8 0%, #00D4FF 100%);
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Resumen del Pedido y Controles de Cantidad */
+.summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 10px;
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.item-price {
+  color: #00D4FF;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.btn-qty {
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  color: #00D4FF;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.btn-qty:hover {
+  background: #00D4FF;
+  color: #000;
+  box-shadow: 0 0 10px #00D4FF;
+}
+
+.qty-number {
+  color: #fff;
+  font-weight: bold;
+  min-width: 24px;
+  text-align: center;
+}
+
+.btn-remove {
+  background: transparent;
+  border: none;
+  color: #ef4444;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 4px;
+  transition: transform 0.2s;
+}
+
+.btn-remove:hover {
+  transform: scale(1.25);
+}
+
+/* Líneas de Totales */
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.summary-line.total {
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 800;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.summary-line.total span:last-child {
+  color: #00D4FF;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.4);
+}
+
+/* Estado de carrito vacío */
+.empty-cart-msg {
+  text-align: center;
+  padding: 30px 0;
+  color: #94a3b8;
+}
+
+.btn-store-link {
+  display: inline-block;
+  margin-top: 15px;
+  background: #00D4FF;
+  color: #000;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-store-link:hover {
+  background: #38bdf8;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
+}

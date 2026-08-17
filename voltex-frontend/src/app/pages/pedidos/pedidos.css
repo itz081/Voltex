@@ -1,0 +1,93 @@
+.store-container {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.store-header {
+  margin-bottom: 30px;
+}
+
+.btn-back {
+  background: transparent;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  color: #00D4FF;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+  background: rgba(0, 212, 255, 0.1);
+}
+
+.pedidos-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.pedido-card {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.pedido-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+.pedido-id {
+  font-weight: bold;
+  color: #00D4FF;
+}
+
+.pedido-status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  background: rgba(234, 179, 8, 0.2);
+  color: #eab308;
+}
+
+.pedido-body p {
+  margin: 6px 0;
+  color: #94a3b8;
+}
+
+.empty-state, .loading-state {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(15, 23, 42, 0.5);
+  border-radius: 12px;
+  border: 1px dashed rgba(0, 212, 255, 0.2);
+}
+
+.empty-icon {
+  font-size: 3rem;
+  color: #00D4FF;
+  margin-bottom: 15px;
+}
+
+.btn-explore {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #00D4FF;
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
